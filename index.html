@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Online</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Rubik:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+
+
+
+</head>
+
+<body>
+    <div id="page" class="site">
+        <aside class="site-off desktop-hide">
+            <div class="off-canvas">
+                <div class="canvas-head flexitem">
+                    <div class="logo "><a href="/"><img src="Images/OnlineShop-icon.png" alt=""></a></div>
+                    <a href="#" class="t-close flexcenter"><i class="ri-close-line"></i></a>
+                </div>
+                <div class="departments"></div>
+                <nav></nav>
+                <div class="thetop-nav"></div>
+            </div>
+        </aside>
+        <header>
+            <div class="header-top mobile-hide">
+                <div class="container">
+                    <div class="wrapper flexitem ">
+                        <div class="left">
+                            <ul class="flexitem main-links">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Featured Product</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="flexitem main-links">
+                                <li><a href="#">Sign-Up</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Order Tracking</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header-Top -->
+
+            <div class="header-nav">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <a href="#" class="trigger desktop-hide"><span class="i ri-menu-2-line"></span></a>
+                        <div class="left flexitem">
+                            <div class="logo "><a href="/"><img src="Images/OnlineShop.jpg" alt=""></a></div>
+                            <nav class="mobile-hide">
+                                <ul class="flexitem second-links">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="#" onclick="showGroceries()">Groceries</a></li>
+                                    <li class="has-child">
+                                        <a href="#" onclick="lifeStyle()">Life Style
+                                            <div class="icon-small"><i class="ri-arrow-down-s-line"></i></div>
+                                        </a>
+                                        <div class="mega">
+                                            <div class="container">
+                                                <div class="wrapper">
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Women's Clothing</h4>
+                                                            <ul>
+                                                                <li><a href="#">Jackets</a></li>
+                                                                <li><a href="#">Shirt & T-Shirt</a></li>
+                                                                <li><a href="#">Partywear</a></li>
+                                                                <li><a href="#"></a>Casuals</li>
+                                                                <li><a href="#"></a>Kurties</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Men's Clothing</h4>
+                                                            <ul>
+                                                                <li><a href="#">Jackets</a></li>
+                                                                <li><a href="#">Shirt & T-Shirt</a></li>
+                                                                <li><a href="#">Casuals</a></li>
+                                                                <li><a href="#">Shorts</a></li>
+                                                                <li><a href="#">Cargos</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Accessories</h4>
+                                                            <ul>
+                                                                <li><a href="#">Fragrence</a></li>
+                                                                <li><a href="#">Jwellery</a></li>
+                                                                <li><a href="#">Caps</a></li>
+                                                                <li><a href="#">Wallet</a></li>
+                                                                <li><a href="#">Footwear</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flexcol">
+                                                        <div class="row">
+                                                            <h4>Cosmetics</h4>
+                                                            <ul>
+                                                                <li><a href="#">Facial Cream</a></li>
+                                                                <li><a href="#">Lipstic</a></li>
+                                                                <li><a href="#">Eye Shadow</a></li>
+                                                                <li><a href="#">Nail Polish</a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#" onclick="Electronics()">Electronics</a></li>
+                                    <li><a href="#" onclick="Furniture()">Furniture
+                                            <div class="fly-item"><span>New!</span></div>
+                                        </a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="right">
+                            <ul class="flexitem second-links">
+                                <li class="mobile-hide"><a href="#">
+                                        <div class="icon-large"><i class="ri-heart-2-line"></i></div>
+                                        <div class="fly-item"><span class="item-number ">0</span></div>
+                                    </a></li>
+                                <li class="iscart">
+                                    <a href="#" >
+                                        <div class="icon-large">
+                                            <i class="ri-shopping-cart-2-line"></i>
+                                            <div class="fly-item"><span class="item-number " id="cartDisplayNumber">0</span></div>
+                                        </div>
+                                        <div class="icon-text">
+                                            <div class="mini-text">Total</div>
+                                            <div id="CartTotal" class="cart-total">&#8377;0.00</div>
+                                        </div>
+                                    </a>
+                                    <div class="mini-cart">
+                                        <div class="content">
+                                            <div class="cart-head" id="CartHead">
+                                               
+                                            </div>
+                                            <div class="cart-body">
+                                                <ul class="products mini" id="cart-item">
+                                                    <!-- <li class="item">
+                                                        <div class="thumbnail object-cover">
+                                                            <a href="#"><img src="Images/1.jpg" alt=""></a>
+                                                        </div>
+                                                        <div class="item-content">
+                                                            <p><a href="#"></a></p>
+                                                            <span class="price">
+                                                                <span></span>
+                                                                <span class="fly-item"><span></span></span>
+                                                            </span>
+                                                        </div>
+                                                        <a href="" class="item-remove"><i class="ri-close-line"></i></a>
+                                                    </li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="cart-footer">
+                                                <div class="subtotal">
+                                                    <p>Subtotal</p>
+                                                    <p id="total-price"></p>
+                                                </div>
+                                                <div class="actions">
+                                                    <a href="#" class="primary-button">Checkout</a>
+                                                    <a href="#" class="secondary-button">View Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main mobile-hide">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <div class="left">
+                            <div class="dpt-cat">
+                                <div class="dpt-head">
+                                    <div class="main-text">All Categories</div>
+                                    <div class="mini-text mobile-hide">Total 2430 Products</div>
+                                    <a href="#" class="dpt-trigger mobile-hide">
+                                        <i class="ri-arrow-down-circle-line ri-xl"></i>
+
+                                    </a>
+                                </div>
+                                <div class="dpt-menu">
+                                    <ul class="second-links">
+                                        <li class="has-child lyfstyle">
+                                            <a href="#" onclick="lifeStyleDpt()">
+                                                <div class="icon-large"><i class="ri-glasses-2-fill"></i></div>
+                                                Life Style
+                                                <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#" onclick="Beauty()">Cosmetics</a></li>
+                                                <li><a href="#" onclick="Jewelery()">Jeweley</a></li>
+                                                <li><a href="#" onclick="Fragrance()">Fragrance</a></li>
+
+                                                <li><a href="#">Backpack & Accessories</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-child women-fashion">
+                                            <a href="#" onclick="WomenFashion()">
+                                                <div class="icon-large"><i class="ri-t-shirt-fill"></i></div>
+                                                Women's Fashion
+
+                                            </a>
+                                        </li>
+                                        <li class="has-child men-fashion">
+                                            <a href="#" onclick="MenFashion()">
+                                                <div class="icon-large"><i class="ri-shirt-line"></i></div>
+                                                Men's Fashion
+
+                                            </a>
+                                        </li>
+                                        <li class="has-child electronics">
+                                            <a href="#" onclick="Electronics()">
+                                                <div class="icon-large"><i class="ri-customer-service-line"></i></i>
+                                                </div>
+                                                Electronics
+                                                <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Camera</a></li>
+                                                <li><a href="#" onclick="Computer()">Computer</a></li>
+                                                <li><a href="#" onclick="Mobile()">Cell Phone</a></li>
+                                                <li><a href="#" onclick="Tv()">Telivision</a></li>
+                                                <li><a href="#" onclick="AudioDevice()">Audio Devices</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-child furniture">
+                                            <a href="#" onclick="Furniture()">
+                                                <div class="icon-large"><i class="ri-armchair-line"></i></div>
+                                                Furniture
+
+                                            </a>
+                                        </li>
+                                        <li class="has-child home-kitchen">
+                                            <a href="#" onclick="showGroceries()">
+                                                <div class="icon-large"><i class="ri-drinks-line"></i></div>
+                                                Home And Kitchen
+                                                <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Fruits</a></li>
+                                                <li><a href="#">Vegitables</a></li>
+                                                <li><a href="#" onclick="showGroceries()">Grocery</a></li>
+                                                <li><a href="#">Kitchen</a></li>
+                                                <li><a href="#">Home Tools</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="search-box">
+                                <form action="" class="search">
+                                    <span class="icon-large"><i class="ri-search-line"></i></span>
+                                    <input type="search" placeholder="Search For...." id="search-bar">
+                                    <button type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main-content">
+            <div class="slider">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="myslider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="image object-cover">
+                                            <img src="Images/Slider/ccb43b85e1a63fc15f98e6f9f04a9200.jpg" alt="">
+                                        </div>
+                                        <div class="text-content flexcol">
+                                            <h4>Shoes</h4>
+                                            <h2><span>Come And Get it!</span><br><span>Brand New Model</span></h2>
+                                            <a href="#" class="primary-button">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="image object-cover">
+                                            <img src="Images/Slider/4184804b-a552-4ee1-b956-e790957c8ffd.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text-content flexcol">
+                                            <h4>Samsung</h4>
+                                            <h2><span>Come And Get it!</span><br><span>Crystal UHD</span></h2>
+                                            <a href="#" class="primary-button">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="image object-cover">
+                                            <img src="Images/Slider/0.jpeg" alt="">
+                                        </div>
+                                        <div class="text-content flexcol">
+                                            <h4>SONY</h4>
+                                            <h2><span>Come And Get it!</span><br><span>Over Head HD Audio</span></h2>
+                                            <a href="#" class="primary-button">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="image object-cover">
+                                            <img src="Images/Slider/Clinique-3-step-beauty-cosmetics-product-photography-commercial-photographer-london-still-life.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text-content flexcol">
+                                            <h4>CLINIQUE</h4>
+                                            <h2><span>Come And Get it!</span><br><span>Best Beauty Products </span></h2>
+                                            <a href="#" class="primary-button">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="brands">
+                <div class="container ">
+                    <div class="wrapper ">
+                        <div class="swiper-container brands-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/acer-logo-1.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/annbale.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/Chanel-Logo.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/ck.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/Dior_Avenue_Montaigne.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/Dolce-Gabbana-Logo.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/fjallraven.jpg.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/gucci-logo-png-gucci-logo-png-transparent-background-download-1500.png"
+                                            alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/john-hardy-jewelry-ee8973f2-b381-43d7-9083-117c364d6e9-resize-750.webp"
+                                            alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/samsung_logo_PNG9.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/sandisk-logo-0.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="item swiper-slide">
+                                    <a href="#">
+                                        <img src="Images/Brand/si5726sd20-silicon-power-logo-silicon-power-logo-computers--com.png"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trending">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="sectop flexitem">
+                            <h2><span>Trending Products</span></h2>
+                        </div>
+                        <div class="column ">
+                            <div class="flexwrap">
+                                <div class="row products big">
+                                    <div class="item item-1">
+                                        <div class="offer">
+                                            <p>Offer End At</p>
+                                            <ul class="flexcenter time" id="timer">
+                                                <li data-time="1">1</li>
+                                                <li data-time="15">15</li>
+                                                <li data-time="27">27</li>
+                                                <li data-time="60">60</li>
+                                            </ul>
+                                            <ul class="flexcenter code" >
+                                                <li >Day</li>
+                                                <li >Hr</li>
+                                                <li >Mnt</li>
+                                                <li >Sec</li>
+                                            </ul>
+                                        </div>
+                                        <div class="media ">
+                                            <div class="image offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"><span>31%</span></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class="offer-product-title"></p>
+                                                </a></h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row products mini">
+                                    <div class="item item-2">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item item-2-1">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item item-2-2">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item item-2-3">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row products mini">
+                                    <div class="item item-3">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"><span>31%</span></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item item-3-1">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"><span>31%</span></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item item-3-2">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"><span>31%</span></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item item-3-3">
+
+                                        <div class="media">
+                                            <div class="thumbnail object-cover offer-product-image">
+                                                <a href="#">
+                                                    <img src="" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="hoverable">
+                                                <ul>
+                                                    <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                    <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="discount circle flexcenter"><span>31%</span></div>
+                                        </div>
+                                        <div class="content">
+
+                                            <h3 class="main-links"><a href="#">
+                                                    <p class=" offer-product-title"></p>
+                                                </a>
+                                            </h3>
+                                            <div class="rating">
+                                                <div class="stars"></div>
+                                                <div class="mini-text"></div>
+                                            </div>
+                                            <div class="price  offer-product-price">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Products -->
+            <div class="features">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="column">
+                            <div class="sectop flexitem">
+                                <h2><span>Featured Products</span></h2>
+                                <div class="second-links"><a href="#" onclick="displayAll()" class="view-all">View All<i
+                                            class="ri-arrow-right-line"></i></a></div>
+                            </div>
+                            <div class="products main flexwrap">
+                                <div class="item item-4">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-5">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-6">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-7">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-8">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-9">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-10">
+
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item item-11">
+                                    <div class="media">
+                                        <div class="thumbnail object-cover offer-product-image">
+                                            <a href="#">
+                                                <img src="" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="hoverable">
+                                            <ul>
+                                                <li class="active"><a href="#"><i class="ri-heart-line"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="ri-eye-line"></i></a></li>
+                                                <li><a href="#"><i class="ri-shuffle-line"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="discount circle flexcenter"><span>31%</span></div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="rating">
+                                            <div class="stars"></div>
+                                            <div class="mini-text"></div>
+                                        </div>
+                                        <h3 class="main-links"><a href="#">
+                                                <p class=" offer-product-title"></p>
+                                            </a>
+                                        </h3>
+
+                                        <div class="price  offer-product-price">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banners">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="column">
+                            <div class="banner flexwrap">
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="Images/banner/Knoll Saarinen Executive Conference Chair.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text-content flexcol">
+                                            <h4>Brutal Sale !</h3>
+                                                <h3><span>Get the deal in here</span><br>Executive Chair
+                                            </h4>
+                                            <a href="#" class="primary-button">Shop Now</a>
+                                        </div>
+                                        <a href="#" class="over-link"></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="Images/banner/Xiaomi-X-series-TVs-launched-in-India.webp" alt="">
+                                        </div>
+                                        <div class="text-content flexcol">
+                                            <h4>Brutal Sale !</h3>
+                                                <h3><span>Smart Discount 4K Deals!</span><br>4K Smart TV
+                                            </h4>
+                                            <a href="#" class="primary-button">Shop Now</a>
+                                        </div>
+                                        <a href="#" class="over-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-categories flexwrap">
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img style="height:240px;"
+                                                src="Images/banner/BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="content mini-links">
+                                            <h4>Life Style</h4>
+                                            <ul class="flexcol">
+                                                <li><a href="#">Make Up</a></li>
+                                                <li><a href="#">Skin Care</a></li>
+                                                <li><a href="#">Footwear</a></li>
+                                                <li><a href="#">Men & Women Dresses</a></li>
+                                                <li><a href="#">Fragrence</a></li>
+                                            </ul>
+                                            <div class="second-links"><a href="#" class="view-all">View All
+                                                    <i class="ri-arrow-right-line"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="Images/banner/home decore.jpg" alt="">
+                                        </div>
+                                        <div class="content mini-links">
+                                            <h4>Home Needs</h4>
+                                            <ul class="flexcol">
+                                                <li><a href="#">Kitchen</a></li>
+                                                <li><a href="#">Dinning Room</a></li>
+                                                <li><a href="#">Tools</a></li>
+                                                <li><a href="#">Grocery</a></li>
+                                                <li><a href="#">Furniture</a></li>
+                                            </ul>
+                                            <div class="second-links"><a href="#" class="view-all">View All
+                                                    <i class="ri-arrow-right-line"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="item">
+                                        <div class="image">
+                                            <img src="Images/banner/iPhone_14_Pro_Max_iPhone_14_Pro_Deep_Purple_Combo_Screen__GBEN-scaled.webp"
+                                                alt="">
+                                        </div>
+                                        <div class="content mini-links">
+                                            <h4>Gadgets</h4>
+                                            <ul class="flexcol">
+                                                <li><a href="#">Cellphone</a></li>
+                                                <li><a href="#">Gaming</a></li>
+                                                <li><a href="#">TV</a></li>
+                                                <li><a href="#">Audio</a></li>
+                                                <li><a href="#">Computer</a></li>
+                                            </ul>
+                                            <div class="second-links"><a href="#" class="view-all">View All
+                                                    <i class="ri-arrow-right-line"></i></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Update Filtered Product -->
+        <div class="features">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="column">
+                        <div class="sectop flexitem">
+                            <h2><span id="productFilter"></span></h2>
+
+                        </div>
+                        <div class="products-all products main flexwrap">
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="newsletter">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="box">
+                            <div class="content">
+                                <h3>Join our Newsletter</h3>
+                                <p>Get E-mail update our latest shop and <strong>special offers</strong></p>
+                            </div>
+                            <form action="" class="search">
+                                <span class="icon-large"><i class="ri-mail-line"></i></span>
+                                <input type="mail" placeholder="Your email address" required>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- newsletter -->
+
+            <div class="widgets">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="flexwrap">
+                            <div class="row">
+                                <div class="item mini-links">
+                                    <h4>Help & Contact</h4>
+                                    <ul class="flexcol">
+                                        <li><a href="#">Your Account</a></li>
+                                        <li><a href="#">Your Order</a></li>
+                                        <li><a href="#">Shipping Rates</a></li>
+                                        <li><a href="#">Returns</a></li>
+                                        <li><a href="#">Assistant</a></li>
+                                        <li><a href="#">Help</a></li>
+                                        <li><a href="#">Contact us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="item mini-links">
+                                    <h4>Product Categories</h4>
+                                    <ul class="flexcol">
+                                        <li><a href="#">Beauty</a></li>
+                                        <li><a href="#">Electronics</a></li>
+                                        <li><a href="#">Women's Fashion</a></li>
+                                        <li><a href="#">Men's Fashion</a></li>
+                                        <li><a href="#">Home & Kitchen</a></li>
+                                        <li><a href="#">Sports</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="item mini-links">
+                                    <h4>Payment Info</h4>
+                                    <ul class="flexcol">
+                                        <li><a href="#">Bussiness Card</a></li>
+                                        <li><a href="#">Shop with Points</a></li>
+                                        <li><a href="#">Reload Your Balance</a></li>
+                                        <li><a href="#">Paypal</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="item mini-links">
+                                    <h4>About Us</h4>
+                                    <ul class="flexcol">
+                                        <li><a href="#">Company Info</a></li>
+                                        <li><a href="#">News</a></li>
+                                        <li><a href="#">Investors</a></li>
+                                        <li><a href="#">Careers</a></li>
+                                        <li><a href="#">Policies</a></li>
+                                        <li><a href="#">Customer reviews</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="flexcol">
+                            <div class="logo">
+                                <a href="#"><img src="Images/OnlineShop-icon.png" alt="logo"></a>
+                            </div>
+                            <div class="social">
+                                <ul class="flexitem">
+                                    <li><a href="#"><i class="ri-twitter-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-facebook-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-linkedin-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                                    <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="mini-text">Copyright 2025 © Online Shoping All Right Reserved</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-bottom desktop-hide">
+                <div class="container">
+                    <div class="wrapper">
+                        <nav>
+                            <ul class="flexitem">
+                                <li>
+                                    <a href="#">
+                                        <i class="ri-bar-chart-line"></i>
+                                        <span>Trending</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ri-user-6-line"></i>
+                                        <span>Account</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ri-heart-line"></i>
+                                        <span>Wishlist</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ri-search-line"></i>
+                                        <span>Search</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="cart-trigger">
+                                        <i class="ri-shopping-cart-line"></i>
+                                        <span>Cart</span>
+                                        <div class="fly-item">
+                                            <span class="item-number">0</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
