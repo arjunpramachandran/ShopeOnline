@@ -246,7 +246,7 @@ const displayData3 = (data) => {
                         <div class="media">
                             <div class="thumbnail offer-product-image">
                                 <a href="">
-                                    <img src="images/API/${product.id}.jpg"  alt="${product.title}" >
+                                    <img src="Images/API/${product.id}.jpg"  alt="${product.title}" >
                                 </a>
                             </div>
                             <div class="hoverable">
@@ -308,7 +308,7 @@ const displayRandomProduct = (className) => {
         productTitleElement.innerText = randomProduct.title || randomProduct.name;
     }
     if (productImageElement) {
-        productImageElement.src = randomProduct.thumbnail || randomProduct.image_link || `images/API/${randomProduct.id}.jpg`;
+        productImageElement.src = randomProduct.thumbnail || randomProduct.image_link || `Images/API/${randomProduct.id}.jpg`;
     }
     if (productPriceElement) {
         productPriceElement.innerHTML = `<span class="current" >Rs. ${roundToNearest100(randomProduct.price * 86.47)} </span>
@@ -1053,7 +1053,7 @@ const cartData3=(button)=>{
     newItem.id = `cartItem-${cartIndex}`
     newItem.innerHTML = 
                             `<div class="thumbnail object-cover">
-                                <a href="#"><img src="images/API/${product.id}.jpg" alt=""></a>
+                                <a href="#"><img src="Images/API/${product.id}.jpg" alt=""></a>
                             </div>
                             <div class="item-content">
                                 <p><a href="#"></a>${product.title}</p>
